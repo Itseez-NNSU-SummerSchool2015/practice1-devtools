@@ -3,7 +3,6 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include <algorithm>
 
 using namespace cv;
 
@@ -24,9 +23,9 @@ public:
 		   {
 			   double intens = 0.0;
 
-			   for (int i= 0 - deth ; i< deth; i++)
+			   for (int i= 0 - deth ; i< deth+1 ; i++)
 			   {
-				   for (int j = 0 - deth ; j< deth ; j++)
+				   for (int j = 0 - deth ; j< deth+1 ; j++)
 				   {
 					   
 					   if (x+i< 0 || y+j <0)
@@ -76,9 +75,9 @@ public:
 		   {
 			   double intens = 0.0;
 
-			   for (int i= 0 - deth ; i< deth; i++)
+			   for (int i= 0 - deth ; i< deth+1; i++)
 			   {
-				   for (int j = 0 - deth ; j< deth ; j++)
+				   for (int j = 0 - deth ; j< deth+1 ; j++)
 				   {
 
 						intens += src [x+i][y+j]*kernel[i + deth][j  + deth];
@@ -105,9 +104,9 @@ public:
 		   {
 			   int n=0;
 			  
-			   for (int i= 0 - deth ; i< deth; i++)
+			   for (int i= 0 - deth ; i< deth+1; i++)
 			   {
-				   for (int j = 0 - deth ; j< deth ; j++)
+				   for (int j = 0 - deth ; j< deth+1 ; j++)
 				   {
 					   				   
 						   intens[n] = src [x+i][y+j];
@@ -136,6 +135,70 @@ public:
    }
    virtual void SobelOx(const Matrix &src, Matrix &dst)
    { 
+	   /*
+	   matrix Sobel 
+	   -1 0 1
+	   -2 0 2
+	   -1 0 1
+	   */
+
+
+	   Matrix sobel(3,3);
+	   sobel[0][0]=sobel[0][2] = -1;
+	   sobel[1][0] = sobel[1][1] = sobel[1][2] = 0;
+	   sobel[0][1]=-2;
+	   sobel[2][0] = sobel[2][2]= 1;
+	   sobel[2][1] = 2;
+
+
+	   dst = Matrix(src.rows(),src.cols());
+
+	   int deth = 1;
+	   
+	   for (int x=0; x< src.rows(); x++)
+	   {
+		   for (int y=0; y<src.cols();y++)
+		   {
+			   double intens = 0.0;
+
+			   for (int i= 0 - deth ; i< deth+1 ; i++)
+			   {
+				   for (int j = 0 - deth ; j< deth+1 ; j++)
+				   {
+					   
+					   if (x+i< 0 || y+j <0)
+					   {
+						   if (x+i<0 && y+j<0)
+						   {
+							   intens += src[x-i][y-j] * sobel[i +deth][j+deth];
+						   }
+						   else
+						   {
+							   if (x+i<0 )
+							   {
+								   intens += src[x-i][y+j]* sobel[i +deth][j+deth];
+							   }
+							   else
+							   {
+								   intens +=src [x+i][y-j]* sobel[i +deth][j+deth];
+
+							   }
+						   }
+
+					   }
+					   else
+					   {
+						   intens += src [x+i][y+j]* sobel[i +deth][j+deth] ;
+					   }
+					   
+				   }
+			   }
+	
+			   dst[x][y] =  intens;
+		   }
+	   }
+
+
    }
 };
 

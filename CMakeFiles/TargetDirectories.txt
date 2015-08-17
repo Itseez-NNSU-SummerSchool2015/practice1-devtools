@@ -1,0 +1,6 @@
+C:/Temp/practice1/practice1-devtools/CMakeFiles/ALL_BUILD.dir
+C:/Temp/practice1/practice1-devtools/CMakeFiles/ZERO_CHECK.dir
+C:/Temp/practice1/practice1-devtools/3rdparty/CMakeFiles/gtest.dir
+C:/Temp/practice1/practice1-devtools/samples/CMakeFiles/matrix_sample.dir
+C:/Temp/practice1/practice1-devtools/src/CMakeFiles/practice1.dir
+C:/Temp/practice1/practice1-devtools/test/CMakeFiles/practice1_test.dir

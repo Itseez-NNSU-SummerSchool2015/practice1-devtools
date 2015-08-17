@@ -1,17 +1,16 @@
 #include "filters.hpp"
 
 Filters* createFiltersOpenCV();
-// Declare your implementation here
-// Filters* createFiltersYourName();
+
+Filters* createFiltersSemichev();
 
 Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
 {
     switch (impl) {
         case OPENCV:
             return createFiltersOpenCV();
-        // Add case for your implementation
-        // case YOUR_NAME:
-        //     return createFiltersYourName();
+        case SEMICHEV:
+            return createFiltersSemichev();
         default:
             return 0;
     }

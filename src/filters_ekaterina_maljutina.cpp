@@ -28,22 +28,22 @@ public:
 				   for (int j = 0 - deth ; j< deth+1 ; j++)
 				   {
 					   
-					   if (x+i< 0 || y+j <0)
+					   if (x+i< 0 || y+j <0 || x+i >= src.rows() || y+j >= src.cols() )
 					   {
-						   if (x+i<0 && y+j<0)
+						   if ( (x+i<0 && y+j<0 ) || (x+i >= src.rows() && y+j >= src.cols()) )
 						   {
 							   intens += src[x-i][y-j]/ (kSize * kSize);
 						   }
 						   else
 						   {
-							   if (x+i<0 )
+							   if (x+i<0  || x+i >= src.rows())
 							   {
 								   intens += src[x-i][y+j]/ (kSize * kSize);
 							   }
 							   else
 							   {
-								   intens +=src [x+i][y-j]/ (kSize * kSize);
-
+									intens +=src [x+i][y-j]/ (kSize * kSize);
+								
 							   }
 						   }
 
@@ -69,9 +69,9 @@ public:
 	   int kSize  =  kernel.rows();
 	   int deth = kSize/2;
 	   
-	   for (int x=deth; x< src.rows(); x++)
+	   for (int x=deth; x< src.rows()-deth; x++)
 	   {
-		   for (int y=deth; y<src.cols();y++)
+		   for (int y=deth; y<src.cols()-deth;y++)
 		   {
 			   double intens = 0.0;
 
@@ -98,9 +98,9 @@ public:
 	   dst = Matrix(src.rows(),src.cols());
 	   int deth = kSize/2;
 	   double* intens  = new double[kSize*kSize];
-	   for (int x=deth; x< src.rows(); x++)
+	   for (int x=deth; x< src.rows()-deth; x++)
 	   {
-		   for (int y=deth; y<src.cols();y++)
+		   for (int y=deth; y<src.cols()-deth;y++)
 		   {
 			   int n=0;
 			  
@@ -166,29 +166,29 @@ public:
 				   for (int j = 0 - deth ; j< deth+1 ; j++)
 				   {
 					   
-					   if (x+i< 0 || y+j <0)
+					   if (x+i< 0 || y+j <0 || x+i >= src.rows() || y+j >= src.cols() )
 					   {
-						   if (x+i<0 && y+j<0)
+						   if ( (x+i<0 && y+j<0 ) || (x+i >= src.rows() && y+j >= src.cols()) )
 						   {
-							   intens += src[x-i][y-j] * sobel[i +deth][j+deth];
+							   intens += src[x-i][y-j] * sobel[i+deth][j+deth];
 						   }
 						   else
 						   {
-							   if (x+i<0 )
+							   if (x+i<0  || x+i >= src.rows())
 							   {
-								   intens += src[x-i][y+j]* sobel[i +deth][j+deth];
+								   intens += src[x-i][y+j]* sobel[i+deth][j+deth];
 							   }
 							   else
 							   {
-								   intens +=src [x+i][y-j]* sobel[i +deth][j+deth];
-
+									intens +=src [x+i][y-j]* sobel[i+deth][j+deth];
+								
 							   }
 						   }
 
 					   }
 					   else
 					   {
-						   intens += src [x+i][y+j]* sobel[i +deth][j+deth] ;
+						   intens += src [x+i][y+j]* sobel[i+deth][j+deth] ;
 					   }
 					   
 				   }

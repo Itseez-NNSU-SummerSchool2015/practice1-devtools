@@ -17,6 +17,7 @@ enum FILTERS_IMPLEMENTATIONS {
     OPENCV,
     // Add your enum value here
     // YOUR_NAME,
+    MAKAROVA,
     NUM_IMPLS
 };
 

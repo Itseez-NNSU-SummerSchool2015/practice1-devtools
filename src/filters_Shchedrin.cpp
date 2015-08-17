@@ -40,7 +40,7 @@ public:
                         assert(kr >= 0);
                         assert(kc < kernel.cols());
                         assert(kr < kernel.rows());
-                        kerElem = kernel[kc][kr];
+                        kerElem = kernel[kr][kc];
                         sum += kerElem * srcElem;
                     }
                 }

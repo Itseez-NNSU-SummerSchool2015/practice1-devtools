@@ -3,6 +3,7 @@
 Filters* createFiltersOpenCV();
 // Declare your implementation here
 // Filters* createFiltersYourName();
+Filters* createFiltersMakarova();
 
 Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
 {
@@ -14,5 +15,9 @@ Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
         //     return createFiltersYourName();
         default:
             return 0;
+    }
+
+    switch (MAKAROVA){
+    
     }
 }

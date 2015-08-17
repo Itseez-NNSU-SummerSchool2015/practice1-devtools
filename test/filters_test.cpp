@@ -25,7 +25,7 @@ class FiltersTest : public ::testing::TestWithParam<int>
     Filters* filters;
 };
 
-TEST_P(FiltersTest, DISABLED_box_filter_on_zero_mat)
+TEST_P(FiltersTest, box_filter_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), dstExp(5, 5);
     src.Zeros();
@@ -36,7 +36,7 @@ TEST_P(FiltersTest, DISABLED_box_filter_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_box_filter_on_ones_mat)
+TEST_P(FiltersTest, box_filter_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), expDst(4, 4);
     src.Ones();
@@ -47,7 +47,7 @@ TEST_P(FiltersTest, DISABLED_box_filter_on_ones_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_box_filter_on_correct_mat)
+TEST_P(FiltersTest, box_filter_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_box_filter.png";
@@ -132,7 +132,7 @@ TEST_P(FiltersTest, filter2d_on_correct_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_median_on_zero_mat)
+TEST_P(FiltersTest, median_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), dstExp(5, 5);
     src.Zeros();
@@ -143,7 +143,7 @@ TEST_P(FiltersTest, DISABLED_median_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_median_on_correct_mat)
+TEST_P(FiltersTest, median_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_median_3.png";
@@ -172,7 +172,7 @@ TEST_P(FiltersTest, DISABLED_median_on_correct_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_SobelOx_on_zero_mat)
+TEST_P(FiltersTest, SobelOx_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), dstExp(5, 5);
     src.Zeros();
@@ -183,7 +183,7 @@ TEST_P(FiltersTest, DISABLED_SobelOx_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_SobelOx_on_ones_mat)
+TEST_P(FiltersTest, SobelOx_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), dstExp(4, 4);
     src.Ones();
@@ -194,7 +194,7 @@ TEST_P(FiltersTest, DISABLED_SobelOx_on_ones_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_sobel_ox_on_correct_mat)
+TEST_P(FiltersTest, sobel_ox_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_sobel_ox.png";

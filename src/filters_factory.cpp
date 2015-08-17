@@ -2,7 +2,7 @@
 
 Filters* createFiltersOpenCV();
 // Declare your implementation here
-// Filters* createFiltersYourName();
+Filters* createFiltersShchedrin();
 
 Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
 {
@@ -10,8 +10,8 @@ Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
         case OPENCV:
             return createFiltersOpenCV();
         // Add case for your implementation
-        // case YOUR_NAME:
-        //     return createFiltersYourName();
+        case SHCHEDRIN:
+            return createFiltersShchedrin();
         default:
             return 0;
     }

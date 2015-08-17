@@ -3,6 +3,7 @@
 Filters* createFiltersOpenCV();
 // Declare your implementation here
 // Filters* createFiltersYourName();
+Filters* createFiltersEkaterina_Maljutina();
 
 Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
 {
@@ -12,7 +13,10 @@ Filters* createFilters(FILTERS_IMPLEMENTATIONS impl)
         // Add case for your implementation
         // case YOUR_NAME:
         //     return createFiltersYourName();
+		case Ekaterina_Maljutina:
+			return createFiltersEkaterina_Maljutina();
         default:
             return 0;
     }
 }
+

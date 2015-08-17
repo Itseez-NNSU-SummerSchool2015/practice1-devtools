@@ -17,7 +17,7 @@ enum FILTERS_IMPLEMENTATIONS {
     OPENCV,
     // Add your enum value here
     // YOUR_NAME,
-    NUM_IMPLS
+    Ilya
 };
 
 Filters* createFilters(FILTERS_IMPLEMENTATIONS impl);

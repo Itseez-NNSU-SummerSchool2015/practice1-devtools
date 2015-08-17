@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{AB01A41B-F0A0-4300-BE51-EAAAFC5A7627}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>practice1_test</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Temp\practice1\practice1-devtools\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">practice1_test.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">practice1_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Temp\practice1\practice1-devtools\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">practice1_test.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">practice1_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Temp\practice1\practice1-devtools\test\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">practice1_test.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">practice1_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Temp\practice1\practice1-devtools\test\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">practice1_test.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">practice1_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E copy_directory C:/Temp/practice1/practice1-devtools/testdata C:/Temp/practice1/practice1-devtools/bin/testdata
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Debug\gtest.lib;..\lib\Debug\practice1.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_videostab2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ts2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_superres2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_stitching2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_contrib2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_nonfree2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ocl2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_gpu2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_photo2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_objdetect2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_legacy2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_video2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ml2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_calib3d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_features2d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_highgui2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_imgproc2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_flann2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Temp/practice1/practice1-devtools/lib/Debug/practice1_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E copy_directory C:/Temp/practice1/practice1-devtools/testdata C:/Temp/practice1/practice1-devtools/bin/testdata
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Release\gtest.lib;..\lib\Release\practice1.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_videostab2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ts2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_superres2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_stitching2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_contrib2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_nonfree2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ocl2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_gpu2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_photo2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_objdetect2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_legacy2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_video2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ml2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_calib3d2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_features2d2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_highgui2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_imgproc2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_flann2411.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_core2411.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Temp/practice1/practice1-devtools/lib/Release/practice1_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Temp/practice1/practice1-devtools/test/MinSizeRel/practice1_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E copy_directory C:/Temp/practice1/practice1-devtools/testdata C:/Temp/practice1/practice1-devtools/bin/testdata
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\MinSizeRel\gtest.lib;..\lib\MinSizeRel\practice1.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_videostab2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ts2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_superres2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_stitching2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_contrib2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_nonfree2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ocl2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_gpu2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_photo2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_objdetect2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_legacy2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_video2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ml2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_calib3d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_features2d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_highgui2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_imgproc2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_flann2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Temp/practice1/practice1-devtools/lib/MinSizeRel/practice1_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Temp/practice1/practice1-devtools/test/MinSizeRel/practice1_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Temp/practice1/practice1-devtools/test/RelWithDebInfo/practice1_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Temp/practice1/practice1-devtools/include;C:/Temp/practice1/practice1-devtools/3rdparty;C:/OpenCV-2.4.11/opencv/build/include;C:/OpenCV-2.4.11/opencv/build/include/opencv;C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E copy_directory C:/Temp/practice1/practice1-devtools/testdata C:/Temp/practice1/practice1-devtools/bin/testdata
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\RelWithDebInfo\gtest.lib;..\lib\RelWithDebInfo\practice1.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_videostab2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ts2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_superres2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_stitching2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_contrib2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_nonfree2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ocl2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_gpu2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_photo2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_objdetect2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_legacy2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_video2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ml2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_calib3d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_features2d2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_highgui2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_imgproc2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_flann2411d.lib;C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Temp/practice1/practice1-devtools/lib/RelWithDebInfo/practice1_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Temp/practice1/practice1-devtools/test/RelWithDebInfo/practice1_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Temp/practice1/practice1-devtools -BC:/Temp/practice1/practice1-devtools --check-stamp-file C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Temp/practice1/practice1-devtools -BC:/Temp/practice1/practice1-devtools --check-stamp-file C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Temp/practice1/practice1-devtools -BC:/Temp/practice1/practice1-devtools --check-stamp-file C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Temp/practice1/practice1-devtools -BC:/Temp/practice1/practice1-devtools --check-stamp-file C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;C:\Temp\practice1\practice1-devtools\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="filters_test.cpp"  />
+    <ClCompile Include="matrix_test.cpp"  />
+    <ClCompile Include="test_main.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Temp/practice1/practice1-devtools/ZERO_CHECK.vcxproj">
+      <Project>570B54FB-C0FD-4DCD-AAAA-4F7D4DA96AEE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Temp/practice1/practice1-devtools/3rdparty/gtest.vcxproj">
+      <Project>32B24948-7570-4057-A93D-99CE071EABDA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Temp/practice1/practice1-devtools/src/practice1.vcxproj">
+      <Project>CF362472-713A-4338-AC80-EDC3E9A978DD</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

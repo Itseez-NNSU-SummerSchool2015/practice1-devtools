@@ -1,0 +1,29 @@
+﻿Build started 8/17/2015 6:00:43 PM.
+     1>Project "C:\Temp\practice1\practice1-devtools\test\practice1_test.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "practice1_test.dir\Debug\practice1_test.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "practice1_test.dir\Debug\practice1_test.unsuccessfulbuild".
+       CustomBuild:
+         Building Custom Rule C:/Temp/practice1/practice1-devtools/test/CMakeLists.txt
+         CMake does not need to re-run because C:\Temp\practice1\practice1-devtools\test\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:/Temp/practice1/practice1-devtools/include" /I"C:/Temp/practice1/practice1-devtools/3rdparty" /I"C:/OpenCV-2.4.11/opencv/build/include" /I"C:/OpenCV-2.4.11/opencv/build/include/opencv" /I"C:/Temp/practice1/practice1-devtools/test/../3rdparty/gtest" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D _VARIADIC_MAX=10 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"practice1_test.dir\Debug\\" /Fd"C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb" /Gd /TP /errorReport:prompt filters_test.cpp matrix_test.cpp test_main.cpp
+         filters_test.cpp
+         matrix_test.cpp
+         test_main.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"practice1_test.dir\Debug\practice1_test.exe.embed.manifest.res" practice1_test.dir\Debug\practice1_test_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Temp\practice1\practice1-devtools\bin\practice1_test.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\lib\Debug\gtest.lib ..\lib\Debug\practice1.lib "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_videostab2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ts2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_superres2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_stitching2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_contrib2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_nonfree2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ocl2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_gpu2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_photo2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_objdetect2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_legacy2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_video2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_ml2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_calib3d2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_features2d2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_highgui2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_imgproc2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_flann2411d.lib" "C:\OpenCV-2.4.11\opencv\build\x64\vc10\lib\opencv_core2411d.lib" /MANIFEST /ManifestFile:"practice1_test.dir\Debug\practice1_test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/Temp/practice1/practice1-devtools/bin/practice1_test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Temp/practice1/practice1-devtools/lib/Debug/practice1_test.lib" /MACHINE:X64 practice1_test.dir\Debug\practice1_test.exe.embed.manifest.res
+         practice1_test.dir\Debug\filters_test.obj
+         practice1_test.dir\Debug\matrix_test.obj
+         practice1_test.dir\Debug\test_main.obj  /machine:x64 /debug 
+     1>practice1.lib(filters_factory.obj) : error LNK2019: unresolved external symbol "class Filters * __cdecl createFiltersGrishinSergei(void)" (?createFiltersGrishinSergei@@YAPEAVFilters@@XZ) referenced in function "class Filters * __cdecl createFilters(enum FILTERS_IMPLEMENTATIONS)" (?createFilters@@YAPEAVFilters@@W4FILTERS_IMPLEMENTATIONS@@@Z)
+     1>C:\Temp\practice1\practice1-devtools\bin\practice1_test.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "C:\Temp\practice1\practice1-devtools\test\practice1_test.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.26

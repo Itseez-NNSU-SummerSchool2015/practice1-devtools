@@ -1,0 +1,18 @@
+﻿Build started 8/17/2015 6:00:46 PM.
+     1>Project "C:\Temp\practice1\practice1-devtools\ALL_BUILD.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Debug\ALL_BUILD\ALL_BUILD.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "x64\Debug\ALL_BUILD\ALL_BUILD.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/Temp/practice1/practice1-devtools/CMakeLists.txt
+         CMake does not need to re-run because C:\Temp\practice1\practice1-devtools\CMakeFiles\generate.stamp is up-to-date.
+         Build all projects
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\ALL_BUILD\ALL_BUILD.unsuccessfulbuild".
+         Touching "x64\Debug\ALL_BUILD\ALL_BUILD.lastbuildstate".
+     1>Done Building Project "C:\Temp\practice1\practice1-devtools\ALL_BUILD.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.45

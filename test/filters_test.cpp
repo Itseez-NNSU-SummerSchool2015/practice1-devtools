@@ -63,7 +63,7 @@ TEST_P(FiltersTest, box_filter_on_correct_mat)
     {
         FAIL() << "Can't read" + expOutput + " image";
     }
-    Matrix src(srcMat.rows, srcMat.cols), 
+    Matrix src(srcMat.rows, srcMat.cols),
            expDst(expDstMat.rows, expDstMat.cols),
            dst(src.rows(), src.cols());
     cvMat2matrix(srcMat, src);
@@ -118,8 +118,8 @@ TEST_P(FiltersTest, filter2d_on_correct_mat)
     {
         FAIL() << "Can't read" + expOutput + " image";
     }
-    
-    Matrix src(srcMat.rows, srcMat.cols), 
+
+    Matrix src(srcMat.rows, srcMat.cols),
            expDst(expDstMat.rows, expDstMat.cols),
            dst(src.rows(), src.cols()), kernel(kSize, kSize);
     kernel.Ones();
@@ -159,8 +159,8 @@ TEST_P(FiltersTest, median_on_correct_mat)
     {
         FAIL() << "Can't read" + expOutput + " image";
     }
-    
-    Matrix src(srcMat.rows, srcMat.cols), 
+
+    Matrix src(srcMat.rows, srcMat.cols),
            expDst(expDstMat.rows, expDstMat.cols),
            dst(src.rows(), src.cols());
 
@@ -210,8 +210,8 @@ TEST_P(FiltersTest, sobel_ox_on_correct_mat)
     {
         FAIL() << "Can't read" + expOutput + " image";
     }
-    
-    Matrix src(srcMat.rows, srcMat.cols), 
+
+    Matrix src(srcMat.rows, srcMat.cols),
            expDst(expDstMat.rows, expDstMat.cols),
            dst(src.rows(), src.cols());
 

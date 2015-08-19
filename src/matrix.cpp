@@ -143,9 +143,13 @@ ostream& operator<<(ostream& os, const Matrix& m)
 {
     os << endl;
 
-    for (int i = 0; i < m.kRows; i++)
+    os << "Matrix size: " << m.rows() << " x " << m.cols() << endl;
+
+    // We limit number of printed elements to fit to the screen
+    os << "Top-left 10x10 corner of the matrix is:" << endl;
+    for (int i = 0; i < m.kRows && i < 10; i++)
     {
-        for (int j = 0; j < m.kCols; j++)
+        for (int j = 0; j < m.kCols && j < 10; j++)
         {
             os << (int)(m.values[i][j]) << '\t';
         }

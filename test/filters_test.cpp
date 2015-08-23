@@ -25,7 +25,7 @@ class FiltersTest : public ::testing::TestWithParam<int>
     Filters* filters;
 };
 
-TEST_P(FiltersTest, box_filter_on_zero_mat)
+TEST_P(FiltersTest, DISABLED_box_filter_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), dstExp(5, 5);
     src.Zeros();
@@ -36,7 +36,7 @@ TEST_P(FiltersTest, box_filter_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, box_filter_on_ones_mat)
+TEST_P(FiltersTest, DISABLED_box_filter_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), expDst(4, 4);
     src.Ones();
@@ -47,7 +47,7 @@ TEST_P(FiltersTest, box_filter_on_ones_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, box_filter_on_correct_mat)
+TEST_P(FiltersTest, DISABLED_box_filter_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_box_filter.png";
@@ -74,7 +74,7 @@ TEST_P(FiltersTest, box_filter_on_correct_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, filter2d_on_zero_mat)
+TEST_P(FiltersTest, DISABLED_filter2d_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), kernel(3, 3);
     src.Zeros();
@@ -86,7 +86,7 @@ TEST_P(FiltersTest, filter2d_on_zero_mat)
     EXPECT_EQ(src, dst);
 }
 
-TEST_P(FiltersTest, filter2d_on_ones_mat)
+TEST_P(FiltersTest, DISABLED_filter2d_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), kernel(3, 3), dstExp(4, 4);
     src.Ones();
@@ -101,7 +101,7 @@ TEST_P(FiltersTest, filter2d_on_ones_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, filter2d_on_correct_mat)
+TEST_P(FiltersTest, DISABLED_filter2d_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_filter2d.png";
@@ -143,6 +143,43 @@ TEST_P(FiltersTest, median_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
+TEST_P(FiltersTest, median_on_simple_mat)
+{
+    const int size = 4;
+    int elem = 0;
+    Matrix src(size, size), dst(size, size), dstExp(size, size);
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            src[i][j] = elem++;
+        }
+    }
+    dstExp[0][0] = 1;
+    dstExp[0][1] = 2;
+    dstExp[0][2] = 3;
+    dstExp[0][3] = 3;
+
+    dstExp[1][0] = 4;
+    dstExp[1][1] = 5;
+    dstExp[1][2] = 6;
+    dstExp[1][3] = 7;
+
+    dstExp[2][0] = 8;
+    dstExp[2][1] = 9;
+    dstExp[2][2] = 10;
+    dstExp[2][3] = 11;
+
+    dstExp[3][0] = 12;
+    dstExp[3][1] = 12;
+    dstExp[3][2] = 13;
+    dstExp[3][3] = 14;
+
+    filters->median(src, dst);
+
+    EXPECT_EQ(dstExp, dst);
+}
+
 TEST_P(FiltersTest, median_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
@@ -172,7 +209,7 @@ TEST_P(FiltersTest, median_on_correct_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, SobelOx_on_zero_mat)
+TEST_P(FiltersTest, DISABLED_SobelOx_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), dstExp(5, 5);
     src.Zeros();
@@ -183,7 +220,7 @@ TEST_P(FiltersTest, SobelOx_on_zero_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, SobelOx_on_ones_mat)
+TEST_P(FiltersTest, DISABLED_SobelOx_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), dstExp(4, 4);
     src.Ones();
@@ -194,7 +231,7 @@ TEST_P(FiltersTest, SobelOx_on_ones_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, sobel_ox_on_correct_mat)
+TEST_P(FiltersTest, DISABLED_sobel_ox_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_sobel_ox.png";

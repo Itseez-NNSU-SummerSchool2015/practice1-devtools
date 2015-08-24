@@ -10,7 +10,17 @@ class FiltersKustikova : public Filters
 
     virtual void filter2d(const Matrix &src, Matrix& dst, const Matrix &kernel)
     {
-        
+        if (kernel.rows() != kernel.cols())
+        {
+            std::cout << "Kernel should have square sizes." << std::endl;
+            return;
+        }
+        filter2dInternalPoints(src, dst, kernel);
+        filter2dTopBorderPoints(src, dst, kernel);
+        filter2dButtomBorderPoints(src, dst, kernel);
+        filter2dLeftBorderPoints(src, dst, kernel);
+        filter2dRightBorderPoints(src, dst, kernel);
+        filter2dCornersPoints(src, dst, kernel);
     }
 
     virtual void median(const Matrix &src, Matrix &dst, const int kSize = 3)
@@ -419,12 +429,150 @@ private:
         delete []neigbors;
     }
 
-    void medianFilterCornersPoints(const Matrix &src, Matrix &dst, const int kSize)
+    void medianFilterCornersPoints(
+        const Matrix &src, Matrix &dst, const int kSize)
     {
         medianFilterCorner00(src, dst, kSize);
         medianFilterCorner01(src, dst, kSize);
         medianFilterCorner10(src, dst, kSize);
         medianFilterCorner11(src, dst, kSize);
+    }
+
+    void filter2dInternalPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2;
+        for (int i = kSize; i < src.rows() - kSize; i++)
+        {
+            for (int j = kSize; j < src.cols() - kSize; j++)
+            {
+                int conv = 0;
+                for (int k = -kSize; k <= kSize; k++)
+                {
+                    for (int s = -kSize; s <= kSize; s++)
+                    {
+                        conv += kernel[k + kSize][s + kSize] * src[i + k][j + s];
+                    }
+                }
+                dst[i][j] = (conv > 255) ? 255 : (uchar)conv;
+            }
+        }
+    }
+
+    void filter2dTopBorderPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2;
+        for (int j = kSize; j < src.cols() - kSize; j++)
+        {
+            int conv = 0;
+            for (int k = 0; k <= kSize; k++)
+            {
+                for (int s = -kSize; s <= kSize; s++)
+                {
+                    conv += kernel[k + kSize][s + kSize] * src[k][j + s];
+                }
+            }
+            dst[0][j] = (conv > 255) ? 255 : (uchar)conv;
+        }
+    }
+
+    void filter2dButtomBorderPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2;
+        for (int j = kSize; j < src.cols() - kSize; j++)
+        {
+            int conv = 0;
+            for (int k = -kSize; k <= 0; k++)
+            {
+                for (int s = -kSize; s <= kSize; s++)
+                {
+                    conv += kernel[k + kSize][s + kSize] * src[src.rows() - 1 + k][j + s];
+                }
+            }
+            dst[src.rows() - 1][j] = (conv > 255) ? 255 : (uchar)conv;
+        }
+    }
+
+    void filter2dLeftBorderPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2;
+        for (int i = kSize; i < src.rows() - kSize; i++)
+        {
+            int conv = 0;
+            for (int k = -kSize; k <= kSize; k++)
+            {
+                for (int s = 0; s <= kSize; s++)
+                {
+                    conv += kernel[k + kSize][s + kSize] * src[i + k][s];
+                }
+            }
+            dst[i][0] = (conv > 255) ? 255 : (uchar)conv;
+        }
+    }
+
+    void filter2dRightBorderPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2;
+        for (int i = kSize; i < src.rows() - kSize; i++)
+        {
+                int conv = 0;
+                for (int k = -kSize; k <= kSize; k++)
+                {
+                    for (int s = -kSize; s <= 0; s++)
+                    {
+                        conv += kernel[k + kSize][s + kSize] * src[i + k][src.cols() - 1 + s];
+                    }
+                }
+                dst[i][src.cols() - 1] = (conv > 255) ? 255 : (uchar)conv;
+        }
+    }    
+
+    void filter2dCornersPoints(
+        const Matrix &src, Matrix& dst, const Matrix &kernel)
+    {
+        int kSize = kernel.rows() / 2, conv = 0;
+        for (int k = 0; k <= kSize; k++)
+        {
+            for (int s = 0; s <= kSize; s++)
+            {
+                conv += kernel[k + kSize][s + kSize] * src[k][s];
+            }
+        }
+        dst[0][0] = (conv > 255) ? 255 : (uchar)conv;
+                
+        conv = 0;
+        for (int k = 0; k <= kSize; k++)
+        {
+            for (int s = -kSize; s <= 0; s++)
+            {
+                conv += kernel[k + kSize][s + kSize] * src[k][src.cols() - 1 + s];
+            }
+        }
+        dst[0][src.cols() - 1] = (conv > 255) ? 255 : (uchar)conv;
+
+        conv = 0;
+        for (int k = -kSize; k <= 0; k++)
+        {
+            for (int s = 0; s <= kSize; s++)
+            {
+                conv += kernel[k + kSize][s + kSize] * src[src.rows() - 1 + k][s];
+            }
+        }
+        dst[src.rows() - 1][0] = (conv > 255) ? 255 : (uchar)conv;
+
+        conv = 0;
+        for (int k = -kSize; k <= 0; k++)
+        {
+            for (int s = -kSize; s <= 0; s++)
+            {
+                conv += kernel[k + kSize][s + kSize] * src[src.rows() - 1 + k][src.cols() - 1 + s];
+            }
+        }
+        dst[src.rows() - 1][src.cols() - 1] = (conv > 255) ? 255 : (uchar)conv;
     }
 };
 

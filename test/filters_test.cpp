@@ -74,7 +74,7 @@ TEST_P(FiltersTest, DISABLED_box_filter_on_correct_mat)
     EXPECT_EQ(expDst, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_filter2d_on_zero_mat)
+TEST_P(FiltersTest, filter2d_on_zero_mat)
 {
     Matrix src(5, 5), dst(5, 5), kernel(3, 3);
     src.Zeros();
@@ -86,7 +86,7 @@ TEST_P(FiltersTest, DISABLED_filter2d_on_zero_mat)
     EXPECT_EQ(src, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_filter2d_on_ones_mat)
+TEST_P(FiltersTest, filter2d_on_ones_mat)
 {
     Matrix src(4, 4), dst(4, 4), kernel(3, 3), dstExp(4, 4);
     src.Ones();
@@ -101,7 +101,7 @@ TEST_P(FiltersTest, DISABLED_filter2d_on_ones_mat)
     EXPECT_EQ(dstExp, dst);
 }
 
-TEST_P(FiltersTest, DISABLED_filter2d_on_correct_mat)
+TEST_P(FiltersTest, filter2d_on_correct_mat)
 {
     const std::string input = "./testdata/image.png";
     const std::string expOutput = "./testdata/image_filter2d.png";
